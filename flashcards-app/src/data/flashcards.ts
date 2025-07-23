@@ -1,5 +1,6 @@
 export type Flashcard = {
-  spanish: string;
+  french: string;
+  phonetic: string;
   english: string;
   category: 'animals' | 'food' | 'verbs';
   quiz: {
@@ -13,7 +14,8 @@ export type Flashcard = {
 export const flashcards: Flashcard[] = [
   // Animals
   {
-    spanish: 'el perro',
+    french: 'le chien',
+    phonetic: '/lə ʃjɛ̃/',
     english: 'the dog',
     category: 'animals',
     quiz: {
@@ -22,7 +24,8 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'el gato',
+    french: 'le chat',
+    phonetic: '/lə ʃa/',
     english: 'the cat',
     category: 'animals',
     quiz: {
@@ -31,8 +34,37 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'el pájaro',
+    french: "l'oiseau",
+    phonetic: '/lwazo/',
     english: 'the bird',
+    category: 'animals',
+    quiz: {
+      type: 'fill-in-the-blank',
+    },
+  },
+  {
+    french: 'le cheval',
+    phonetic: '/lə ʃəval/',
+    english: 'the horse',
+    category: 'animals',
+    quiz: {
+      type: 'fill-in-the-blank',
+    },
+  },
+  {
+    french: 'le lion',
+    phonetic: '/lə ljɔ̃/',
+    english: 'the lion',
+    category: 'animals',
+    quiz: {
+      type: 'multiple-choice',
+      options: ['the tiger', 'the bear', 'the wolf', 'the lion'],
+    },
+  },
+  {
+    french: "l'éléphant",
+    phonetic: "/lelefɑ̃/",
+    english: 'the elephant',
     category: 'animals',
     quiz: {
       type: 'fill-in-the-blank',
@@ -40,7 +72,8 @@ export const flashcards: Flashcard[] = [
   },
   // Food
   {
-    spanish: 'la manzana',
+    french: 'la pomme',
+    phonetic: '/la pɔm/',
     english: 'the apple',
     category: 'food',
     quiz: {
@@ -49,7 +82,8 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'el pan',
+    french: 'le pain',
+    phonetic: '/lə pɛ̃/',
     english: 'the bread',
     category: 'food',
     quiz: {
@@ -57,7 +91,8 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'el queso',
+    french: 'le fromage',
+    phonetic: '/lə fʁɔmaʒ/',
     english: 'the cheese',
     category: 'food',
     quiz: {
@@ -65,9 +100,38 @@ export const flashcards: Flashcard[] = [
       options: ['the milk', 'the butter', 'the yogurt', 'the cheese'],
     },
   },
+  {
+    french: "l'eau",
+    phonetic: '/lo/',
+    english: 'the water',
+    category: 'food',
+    quiz: {
+      type: 'fill-in-the-blank',
+    },
+  },
+  {
+    french: 'le vin',
+    phonetic: '/lə vɛ̃/',
+    english: 'the wine',
+    category: 'food',
+    quiz: {
+      type: 'multiple-choice',
+      options: ['the beer', 'the juice', 'the soda', 'the wine'],
+    },
+  },
+  {
+    french: 'le poisson',
+    phonetic: '/lə pwasɔ̃/',
+    english: 'the fish',
+    category: 'food',
+    quiz: {
+      type: 'fill-in-the-blank',
+    },
+  },
   // Verbs
   {
-    spanish: 'correr',
+    french: 'courir',
+    phonetic: '/kuʁiʁ/',
     english: 'to run',
     category: 'verbs',
     quiz: {
@@ -75,7 +139,8 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'comer',
+    french: 'manger',
+    phonetic: '/mɑ̃ʒe/',
     english: 'to eat',
     category: 'verbs',
     quiz: {
@@ -84,11 +149,41 @@ export const flashcards: Flashcard[] = [
     },
   },
   {
-    spanish: 'dormir',
+    french: 'dormir',
+    phonetic: '/dɔʁmiʁ/',
     english: 'to sleep',
     category: 'verbs',
     quiz: {
       type: 'fill-in-the-blank',
+    },
+  },
+  {
+    french: 'parler',
+    phonetic: '/paʁle/',
+    english: 'to speak',
+    category: 'verbs',
+    quiz: {
+      type: 'multiple-choice',
+      options: ['to listen', 'to write', 'to see', 'to speak'],
+    },
+  },
+  {
+    french: 'boire',
+    phonetic: '/bwaʁ/',
+    english: 'to drink',
+    category: 'verbs',
+    quiz: {
+      type: 'fill-in-the-blank',
+    },
+  },
+  {
+    french: 'lire',
+    phonetic: '/liʁ/',
+    english: 'to read',
+    category: 'verbs',
+    quiz: {
+      type: 'multiple-choice',
+      options: ['to write', 'to draw', 'to sing', 'to read'],
     },
   },
 ]; 

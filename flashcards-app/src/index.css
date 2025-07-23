@@ -87,6 +87,60 @@ button:focus-visible {
   background-color: #a3d9f5; /* Lighter blue for flash effect */
 }
 
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.prev-button,
+.next-button {
+  width: 120px; /* Fixed width for uniform size */
+  padding: 0.4rem 0.8rem; /* Smaller padding */
+  font-size: 0.9em; /* Smaller font */
+  box-sizing: border-box;
+}
+
+.prev-button {
+  background-color: #DEB887; /* Light Brown */
+  border-color: #DEB887;
+  color: #333;
+}
+
+.prev-button:hover {
+  background-color: #c9a674;
+}
+
+.prev-button:disabled {
+  background-color: #e0e0e0;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.next-button {
+  background-color: #90EE90; /* Light Green */
+  border-color: #90EE90;
+  color: #333;
+}
+
+.next-button:hover {
+  background-color: #7ccd7c;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.card-counter {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

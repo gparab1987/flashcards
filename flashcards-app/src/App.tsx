@@ -1,16 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import StudyPage from './pages/StudyPage';
-import QuizPage from './pages/QuizPage';
+import CategorySelectionPage from './pages/CategorySelectionPage';
 import StatsPage from './pages/StatsPage';
+import FlashcardPage from './pages/FlashcardPage';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/study" element={<StudyPage />} />
-        <Route path="/quiz" element={<QuizPage />} />
+        <Route
+          path="/study"
+          element={<CategorySelectionPage mode="study" />}
+        />
+        <Route
+          path="/quiz"
+          element={<CategorySelectionPage mode="quiz" />}
+        />
+        <Route path="/study/:category" element={<FlashcardPage />} />
+        <Route path="/quiz/:category" element={<FlashcardPage />} />
         <Route path="/stats" element={<StatsPage />} />
       </Routes>
     </Router>

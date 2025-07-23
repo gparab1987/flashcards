@@ -1,0 +1,101 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 1rem 0;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  min-width: 160px; /* Set a minimum width for uniform size */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  border: 1px solid #89CFF0; /* Light Blue */
+  border-radius: 8px;
+  background-color: #89CFF0; /* Light Blue */
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+.nav-button:hover {
+  background-color: #70b8e0; /* Darker blue on hover */
+}
+
+.nav-button:active {
+  transform: scale(0.97);
+  background-color: #a3d9f5; /* Lighter blue for flash effect */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} 

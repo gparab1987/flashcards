@@ -11,7 +11,7 @@ test.describe('Flashcards App E2E Tests', () => {
     await expect(page.getByRole('heading', { name: 'French Flashcards' })).toBeVisible();
 
     // Check for the welcome message
-    await expect(page.getByRole('heading', { name: 'Choose an activity:' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Welcome! Choose an activity:' })).toBeVisible();
 
     // Check that the main navigation buttons are visible
     await expect(page.getByRole('link', { name: 'Study Mode' })).toBeVisible();

@@ -1,8 +1,8 @@
-# Spanish Flashcards Web App — Software Specification
+# French Flashcards Web App — Software Specification
 
 ## Overview
 
-A front-end-only flashcards web application to help users learn Spanish vocabulary. Built using **Vite**, **React**, and **TypeScript**. The app uses **static data** to render flashcards grouped into categories. It supports study, quiz, and review modes, with performance tracked using in-browser state.
+A front-end-only flashcards web application to help users learn French vocabulary. Built using **Vite**, **React**, and **TypeScript**. The app uses **static data** to render flashcards grouped into categories. It supports study, quiz, and review modes, with performance tracked using in-browser state.
 
 ---
 
@@ -20,7 +20,7 @@ A front-end-only flashcards web application to help users learn Spanish vocabula
 
 ### 1. Flashcard Study Mode
 
-- Flashcards show a Spanish word by default.
+- Flashcards show a French word by default.
 - Clicking a card flips it to reveal the English translation.
 - After flipping, two buttons appear:
   - ✅ "I got it right"
@@ -45,10 +45,10 @@ A front-end-only flashcards web application to help users learn Spanish vocabula
 
 - Two types of quizzes:
   - **Multiple Choice**
-    - One Spanish word, 4 English options (1 correct + 3 distractors)
+    - One French word, 4 English options (1 correct + 3 distractors)
     - Distractors are statically defined per question
   - **Fill in the Blank**
-    - Spanish word shown, user types the English word
+    - French word shown, user types the English word
     - Exact match is required (case-insensitive)
 
 ### 5. Statistics Page
@@ -98,7 +98,7 @@ A front-end-only flashcards web application to help users learn Spanish vocabula
 ```ts
 {
   category: "animals",
-  spanish: "el gato",
+  French: "le chat",
   english: "the cat",
   quiz: {
     type: "multiple-choice",

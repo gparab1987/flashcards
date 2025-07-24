@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>French Flashcards</h1>
-      <h3>Welcome! Choose an activity:</h3>
+      <h3>Choose an activity:</h3>
       <nav>
         <ul className="nav-list">
           <li>

@@ -3,15 +3,24 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { flashcards } from '../data/flashcards';
 import Flashcard from '../components/Flashcard';
 
+/**
+ * The main page for a study session. It displays flashcards for a selected
+ * category and allows the user to navigate through them.
+ */
 const FlashcardPage = () => {
+  // Get the category from the URL params.
   const { category } = useParams<{ category: string }>();
+
+  // State to keep track of the current card's index in the filtered list.
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const navigate = useNavigate();
 
   if (!category) {
     return <div>Category not found.</div>;
   }
 
+  // Filter the main flashcards list to get only the cards for the current category.
   const cardsForCategory = flashcards.filter(
     (card) => card.category === category
   );
@@ -20,9 +29,11 @@ const FlashcardPage = () => {
     return <div>No flashcards found for {category}.</div>;
   }
 
+  /**
+   * Advances to the next card in the deck. If it's the last card,
+   * it navigates back to the category selection page.
+   */
   const handleNextCard = () => {
-    // Before moving to the next card, we should flip the current one back to the front
-    // This is not implemented yet, but something to consider. For now, just advance.
     if (currentIndex < cardsForCategory.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
@@ -30,6 +41,9 @@ const FlashcardPage = () => {
     }
   };
 
+  /**
+   * Navigates to the previous card in the deck. Does nothing if on the first card.
+   */
   const handlePreviousCard = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -64,7 +78,7 @@ const FlashcardPage = () => {
           {isLastCard ? 'Finish Session' : 'Next Card'}
         </button>
       </div>
-      <div style={{ marginTop: '1rem' }}>
+      <div className="back-link-container">
         <Link to="/study" className="nav-button">
           Back to Categories
         </Link>

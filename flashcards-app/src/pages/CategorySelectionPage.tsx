@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
 import { flashcards } from '../data/flashcards';
 
-// Get unique categories from the flashcard data
+// Get a unique list of categories from the flashcard data to display.
 const categories = [...new Set(flashcards.map((card) => card.category))];
 
 type CategorySelectionPageProps = {
+  /** Determines whether the page is for 'study' or 'quiz' mode. */
   mode: 'study' | 'quiz';
 };
 
+/**
+ * A page that allows the user to select a flashcard category.
+ * It is used for both study and quiz modes, determined by the `mode` prop.
+ */
 const CategorySelectionPage = ({ mode }: CategorySelectionPageProps) => {
   const title = mode === 'study' ? 'Study Mode' : 'Quiz Mode';
   const prompt = 'Choose a category to begin:';

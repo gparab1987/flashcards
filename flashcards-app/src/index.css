@@ -128,6 +128,10 @@ button:focus-visible {
   background-color: #7ccd7c;
 }
 
+.back-link-container {
+  margin-top: 1rem;
+}
+
 .category-title {
   font-size: 1.5rem;
   color: #555;
